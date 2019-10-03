@@ -14,6 +14,12 @@ module.exports = function MkAdapterTestHelpers() {
       enumerable: true,
       writable: true 
     },
+    headers: {
+      value: {},
+      configurable: true,
+      enumerable: true,
+      writable: true 
+    },
     params: {
       value: {},
       configurable: true,
@@ -28,7 +34,13 @@ module.exports = function MkAdapterTestHelpers() {
       },
       enumerable: true,
       configurable: true
-    }
+    },
+    path: {
+      value: '',
+      configurable: true,
+      enumerable: true, 
+      writable: true
+    } 
   }); 
 
   return {

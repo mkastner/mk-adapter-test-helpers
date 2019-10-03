@@ -1,6 +1,6 @@
 {
   "name": "mk-adapter-test-helpers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Reqest and response for router adapter methods",
   "main": "index.js",
   "license": "MIT",

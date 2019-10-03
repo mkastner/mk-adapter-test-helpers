@@ -16,6 +16,8 @@ tape('querystring', (t) => {
   adapterTestHelpers.req.body = {a:'1'};
   t.equals(adapterTestHelpers.req.body.a, '1', 'body property exists');
 
+  adapterTestHelpers.req.path = '/';
+  t.equals(adapterTestHelpers.req.path, '/', 'path property exists');
 
 
   t.end();
