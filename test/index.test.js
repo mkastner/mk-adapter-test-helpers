@@ -2,11 +2,9 @@ const tape = require('tape');
 const AdapterTestHelpers = require('../index.js');
 
 tape('querystring', (t) => {
-
  
   let adapterTestHelpers = AdapterTestHelpers();
   adapterTestHelpers.req.query = 'a[]=1&a[]=2'; 
-
 
   t.ok(adapterTestHelpers.req.query.a, 'query parameter a exists');
   t.equals(adapterTestHelpers.req.query.a.length, 2, 'query parameter has two elements');
@@ -19,7 +17,21 @@ tape('querystring', (t) => {
   adapterTestHelpers.req.path = '/';
   t.equals(adapterTestHelpers.req.path, '/', 'path property exists');
 
-
   t.end();
 
 });
+
+tape('callback', (t) => {
+ 
+  AdapterTestHelpers((req, res) => {
+
+    req.params = {
+      test: '1'
+    } 
+
+    t.end();
+
+  });
+
+});
+

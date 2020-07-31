@@ -2,7 +2,7 @@ const qs = require('qs');
 const fs = require('fs');
 const log = require('mk-log');
 
-module.exports = function MkAdapterTestHelpers() {
+module.exports = function MkAdapterTestHelpers(cb) {
 
   const req = {};
   let querystring = '';
@@ -43,7 +43,7 @@ module.exports = function MkAdapterTestHelpers() {
     } 
   }); 
 
-  return {
+  const helper = {
     req,
     res: {
       setHeader(headerKey, headerValue) {
@@ -77,4 +77,11 @@ module.exports = function MkAdapterTestHelpers() {
       }
     }
   };
+
+  if (cb) {
+    cb(helper);
+  }
+
+  return helper;
+
 };
