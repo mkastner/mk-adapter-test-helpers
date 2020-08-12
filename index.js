@@ -79,7 +79,7 @@ module.exports = function MkAdapterTestHelpers(cb) {
   };
 
   if (cb) {
-    cb(helper);
+    cb(helper.req, helper.res);
   }
 
   return helper;
