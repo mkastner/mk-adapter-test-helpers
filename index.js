@@ -40,7 +40,25 @@ module.exports = function MkAdapterTestHelpers(cb) {
       configurable: true,
       enumerable: true, 
       writable: true
-    } 
+    }, 
+    socket: {
+      value: {
+        remoteAddress: '', 
+      },
+      configurable: true,
+      enumerable: true, 
+      writable: true
+    },
+    connection: {
+      // connection is deprecated since node 13 
+      // use soccet instead
+      value: {
+        remoteAddress: '', 
+      },
+      configurable: true,
+      enumerable: true, 
+      writable: true
+    }
   }); 
 
   const helper = {
