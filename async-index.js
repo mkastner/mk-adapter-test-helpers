@@ -5,9 +5,9 @@ module.exports = async function MkAdapterTestHelpers(cb) {
   helper = Helper();
 
   if (cb) {
-    await cb(helper);
+    await cb(helper.req, helper.res);
   }
 
-  return helper;
+  return [helper.req, helper.res];
 };
 
