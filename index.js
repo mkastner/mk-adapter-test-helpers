@@ -8,5 +8,5 @@ module.exports = function MkAdapterTestHelpers(cb) {
     cb(helper.req, helper.res);
   }
 
-  return helper;
+  return [helper.req, helper.res];
 };

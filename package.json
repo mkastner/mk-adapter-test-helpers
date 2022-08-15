@@ -1,11 +1,12 @@
 {
   "name": "mk-adapter-test-helpers",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Reqest and response for router adapter methods",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test tape ./**/*.test.js"
+    "test": "NODE_ENV=test tape ./**/*.test.js",
+    "test:async": "NODE_ENV=test tape ./test/async-index.test.js"
   },
   "devDependencies": {
     "mk-log": "https://github.com/mkastner/mk-log.git#v0.0.13",
